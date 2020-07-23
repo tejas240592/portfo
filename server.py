@@ -29,7 +29,7 @@ def write_to_csv(data):
 
 @app.route('/submit_form', methods=['POST', 'GET'])
 def submit_form():
-    if request.methods == 'POST':
+    if request.method == 'POST':
         try:
             data = request.form.to_dict()
             write_to_csv(data)
